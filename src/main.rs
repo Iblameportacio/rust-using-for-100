@@ -1,8 +1,10 @@
-//Imprime los múltiplos de 5 entre 1 y 100 en orden descendente.
+//Cuenta cuántos números son múltiplos de 4 entre 1 y 200.
 fn main() {
-    for i in (1..=100).rev() {
-        if i % 5 == 0 {
-            println!("{}", i)
+    let mut contador = 0;
+    for i in 1..=200 {
+        if i % 4 == 0 {
+            contador += 1;
         }
     }
+    println!("hay {} numeros multiplos de 4 entre uno y 200", contador)
 }

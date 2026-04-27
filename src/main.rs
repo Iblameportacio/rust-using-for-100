@@ -1,10 +1,8 @@
-//Suma de todos los números pares entre 1 y 100.
+//Imprime los múltiplos de 3 entre 1 y 90.
 fn main() {
-    let mut inicio = 0;
-    for i in 1..=100 {
-        if i % 2 == 0 {
-            inicio = inicio + i;
+    for i in 1..=90 {
+        if i % 3 == 0 {
+            println!("{}", i)
         }
     }
-    println!("{}", inicio)
 }

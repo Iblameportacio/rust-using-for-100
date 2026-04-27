@@ -1,6 +1,6 @@
-//Imprime números del 1 al 100.
+//Imprime números del 100 al 1.
 fn main(){
-    for i in 1..=100{
-        println!("{}", i)
+    for i in (1..=100).rev() {
+        println!("{}", i);
     }
 }

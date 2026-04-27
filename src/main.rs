@@ -1,10 +1,8 @@
-//Cuenta cuántos números son múltiplos de 4 entre 1 y 200.
+//Imprime el cuadrado ($n^2$) de los números del 1 al 20.
 fn main() {
-    let mut contador = 0;
-    for i in 1..=200 {
-        if i % 4 == 0 {
-            contador += 1;
-        }
+    for i in 1..=20 {
+        let inicio: i32 = i;
+        let cuadrado = inicio.pow(2);
+        println!("{}", cuadrado)
     }
-    println!("hay {} numeros multiplos de 4 entre uno y 200", contador)
 }

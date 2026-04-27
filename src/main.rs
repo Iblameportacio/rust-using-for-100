@@ -1,6 +1,9 @@
-//IImprime solo los números impares del 1 al 200.
+//Tabla de multiplicar del 5.
 fn main(){
-    for i in 1..=200 {
-        if i % 3 ==0{println!("{}", i)}
+    let num: i32 = 5;
+    for i in 0..=12{
+        let solucion = num * i;
+        println!("{:?} * {:?} = {:?}", num, i, solucion);
     }
+
 }

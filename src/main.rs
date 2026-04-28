@@ -1,6 +1,8 @@
-//Imprime los números del 1 al 10 con su equivalente en binario (solo el texto).
+//Calcula el producto de los números del 1 al 10.
 fn main() {
+    let mut resultado = 1;
     for i in 1..=10 {
-        println!("{:b}", i)
+        resultado *= i;
     }
+    println!("{}", resultado);
 }

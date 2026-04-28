@@ -1,6 +1,9 @@
-//Imprime los números de 5 en 5 hasta el 250.
+//Imprime los números del 1 al 100, pero sáltate el 13 y el 66.
 fn main() {
-    for i in (5..=250).step_by(5) {
+    for i in 1..=100 {
+        if i == 13 || i == 66 {
+            continue;
+        }
         println!("{}", i)
     }
 }

@@ -1,7 +1,6 @@
-//Imprime "Hola Rust" 50 veces, numerando cada línea.
+//Imprime los números del 1 al 10 con su equivalente en binario (solo el texto).
 fn main() {
-    let hola = "hola rust";
-    for i in 1..=50 {
-        println!("{:?} {:?}", i, hola)
+    for i in 1..=10 {
+        println!("{:b}", i)
     }
 }

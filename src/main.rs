@@ -1,8 +1,6 @@
-//Calcula el producto de los números del 1 al 10.
+//Imprime los números del -50 al 50.
 fn main() {
-    let mut resultado = 1;
-    for i in 1..=10 {
-        resultado *= i;
+    for i in -50..=50 {
+        println!("{}", i)
     }
-    println!("{}", resultado);
 }

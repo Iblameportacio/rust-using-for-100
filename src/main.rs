@@ -1,13 +1,11 @@
-//Imprime los primeros 20 números de la serie de Fibonacci.
-
+//Verifica si un número n es primo (usando un bucle para probar divisores).
 fn main() {
-    let mut a = 0;
-    let mut b = 1;
-    for _i in 0..20 {
-        let i = a + b;
-        let solucion = a;
-        println!("{:?}", solucion);
-        a = b;
-        b = i;
+    let numero = 4;
+    let mut es_primo: bool = true;
+    for i in 2..=numero - 1 {
+        if numero % i == 0 {
+            es_primo = false;
+        }
     }
+    println!("el numero {} es primo? {}", numero, es_primo);
 }

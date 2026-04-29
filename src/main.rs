@@ -1,15 +1,13 @@
-//Calcula el factorial de un número n dado.
-use std::io;
+//Imprime los primeros 20 números de la serie de Fibonacci.
+
 fn main() {
-    let mut resultado = 1;
-    println!("escriba un numero");
-    let mut n = String::new();
-    io::stdin()
-        .read_line(&mut n)
-        .expect("fallo, escribe un numero.");
-    let n: i32 = n.trim().parse().expect("no es número");
-    for i in 1..=n {
-        resultado *= i;
+    let mut a = 0;
+    let mut b = 1;
+    for _i in 0..20 {
+        let i = a + b;
+        let solucion = a;
+        println!("{:?}", solucion);
+        a = b;
+        b = i;
     }
-    println!("el factorial de {:?} es: {:?}", n, resultado)
 }

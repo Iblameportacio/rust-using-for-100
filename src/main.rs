@@ -1,11 +1,16 @@
-//Verifica si un número n es primo (usando un bucle para probar divisores).
+//Encuentra todos los números primos entre 1 y 100.
 fn main() {
-    let numero = 4;
-    let mut es_primo: bool = true;
-    for i in 2..=numero - 1 {
-        if numero % i == 0 {
-            es_primo = false;
+    let mut es_primo: bool;
+    for i in 1..=100 {
+        es_primo = true;
+        for j in 2..i {
+            if i % j == 0 {
+                es_primo = false;
+                break;
+            }
+        }
+        if i > 1 && es_primo {
+            println!("{}", i);
         }
     }
-    println!("el numero {} es primo? {}", numero, es_primo);
 }

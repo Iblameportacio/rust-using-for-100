@@ -1,4 +1,8 @@
-//Imprime los números del 1 al 100, pero sáltate el 13 y el 66.
+//Imprime el factorial de 7
 fn main() {
-    println!("nivel 2");
+    let mut inicio = 1;
+    for i in 1..=7 {
+        inicio *= i;
+    }
+    println!("el factorial de 7 es: {}", inicio)
 }

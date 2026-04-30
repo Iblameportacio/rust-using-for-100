@@ -1,16 +1,8 @@
-//Suma todos los números primos entre 1 y 50.
+//Imprime los números que son divisibles por 3 y 5 al mismo tiempo (1 al 150).
 fn main() {
-    let mut es_primo: bool;
-    for i in 1..=50 {
-        es_primo = true;
-        for j in 2..i {
-            if i % j == 0 {
-                es_primo = false;
-                break;
-            }
-        }
-        if i > 1 && es_primo {
-            println!("{}", i);
+    for i in 1..=150 {
+        if i % 3 == 0 && i % 5 == 0 {
+            println!("{}", i)
         }
     }
 }

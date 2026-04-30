@@ -1,8 +1,11 @@
-//Imprime los números que son divisibles por 3 y 5 al mismo tiempo (1 al 150).
+//Calcula la suma de una progresión aritmética ($a, a+d, a+2d...$) de 10 términos.
 fn main() {
-    for i in 1..=150 {
-        if i % 3 == 0 && i % 5 == 0 {
-            println!("{}", i)
-        }
+    let a = 2;
+    let d = 3;
+    let mut contador = 0;
+    for i in 0..10 {
+        let cumulus = a + i * d;
+        contador += cumulus;
     }
+    println!("{}", contador)
 }

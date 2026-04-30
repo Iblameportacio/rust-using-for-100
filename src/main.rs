@@ -1,7 +1,7 @@
-//Encuentra todos los números primos entre 1 y 100.
+//Suma todos los números primos entre 1 y 50.
 fn main() {
     let mut es_primo: bool;
-    for i in 1..=100 {
+    for i in 1..=50 {
         es_primo = true;
         for j in 2..i {
             if i % j == 0 {

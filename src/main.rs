@@ -1,18 +1,11 @@
-//Imprime los primeros 4 números perfectos.
+//Calcula la media aritmética de los números del 1 al n
 fn main() {
-    println!(
-        "Un número perfecto es aquel que es igual a la
-        suma de sus divisores propios (excluyéndose a sí mismo)"
-    );
-    for z in 1..=10000 {
-        let mut suma = 0;
-        for n in 1..z {
-            if z % n == 0 {
-                suma += n;
-            }
-        }
-        if suma == z {
-            println!("{}", z);
-        }
+    let n = 10;
+    let mut suma = 0;
+    for i in 1..=n {
+        suma += i;
     }
+    println!("la suma es: {}", suma);
+    let media_aritmetica: f32 = suma as f32 / n as f32;
+    println!("la media aritmetica es: {}", media_aritmetica);
 }

@@ -1,6 +1,8 @@
-//Imprime una línea de 20 asteriscos *
 fn main() {
-    for _i in 1..=20 {
-        print!("*");
+    for _fila in 1..=5 {
+        for _5 in 1..=5 {
+            print!("*");
+        }
+        println!(); //← salto de línea
     }
 }

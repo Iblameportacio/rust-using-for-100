@@ -1,9 +1,9 @@
-//Imprime un triángulo rectángulo de asteriscos de altura 5.
+//Imprime un triángulo invertido de asteriscos.
 fn main() {
     for _fila in 1..=5 {
-        for _5 in 1..=_fila {
+        for _5 in _fila..=5 {
             print!("*");
         }
-        println!("");
+        println!();
     }
 }

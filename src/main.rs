@@ -1,11 +1,13 @@
-//Cuenta cuántos divisores tiene un número.
+//Suma los divisores de un número.
 fn main() {
     let a = 436;
-    let mut contador = 0;
+    let mut inicio = 0;
+    println!("los divisores de {} son:", a);
     for i in 1..=a {
         if a % i == 0 {
-            contador += 1;
+            println!("{}", i);
+            inicio += i;
         }
     }
-    println!("el numero {} tiene {} divisores", a, contador)
+    print!("y su suma es: {}", inicio);
 }

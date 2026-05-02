@@ -1,9 +1,11 @@
-// Imprime la tabla de multiplicar del 1 al 10 (tablas anidadas).
+// Imprime los números del 1 al 100,
+//  pero sustituye los múltiplos de 4 por la palabra "Cuatro".
 fn main() {
-    for i in 1..=10 {
-        for z in 1..=10 {
-            let solved = i * z;
-            println!("{:?}*{:?}={:?}", i, z, solved);
+    for i in 1..=100 {
+        if i % 4 == 0 {
+            println!("cuatro");
+        } else {
+            println!("{}", i);
         }
     }
 }

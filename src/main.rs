@@ -1,9 +1,12 @@
-//Imprime un triángulo invertido de asteriscos.
+//Calcula la potencia $a^b$ usando solo bucles y multiplicaciones (sin .pow()).
 fn main() {
-    for _fila in 1..=5 {
-        for _5 in _fila..=5 {
-            print!("*");
-        }
-        println!();
+    let a = 3;
+    let b = 4;
+    let mut resultado = 1;
+
+    for _i in 1..=b {
+        resultado *= a;
     }
+
+    println!("{} elevado a {} es {}", a, b, resultado);
 }

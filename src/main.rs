@@ -1,12 +1,11 @@
-//Calcula la potencia $a^b$ usando solo bucles y multiplicaciones (sin .pow()).
+//Cuenta cuántos divisores tiene un número.
 fn main() {
-    let a = 3;
-    let b = 4;
-    let mut resultado = 1;
-
-    for _i in 1..=b {
-        resultado *= a;
+    let a = 436;
+    let mut contador = 0;
+    for i in 1..=a {
+        if a % i == 0 {
+            contador += 1;
+        }
     }
-
-    println!("{} elevado a {} es {}", a, b, resultado);
+    println!("el numero {} tiene {} divisores", a, contador)
 }

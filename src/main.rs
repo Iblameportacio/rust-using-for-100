@@ -1,13 +1,15 @@
-//Encuentra el número menor en un vector.
+//Calcula el promedio de los valores de un vector de f32.
 fn main() {
     let v = vec![
-        1, 10, 23, 14, 4, 2, 3, 6, 57, 35, 2, 56, 9, 8279, 98, 670, 12, 21, 34, 69,
+        1.0, 10.3, 2.3, 1.44, 4.1, 2.32, 3.0, 6.7, 5.7, 3.5, 0.2, 5.6, 9.8, 82.79, 19.8, 67.0, 1.2,
+        2.1, 3.4, 6.9,
     ];
-    let mut menor = v[0];
+    let mut inicio: f32 = 0.0;
+    let mut contador = 0;
     for i in v {
-        if menor > i {
-            menor = i;
-        }
+        contador += 1;
+        inicio += i;
     }
-    println!("{}", menor);
+    let prom = inicio / contador as f32;
+    println!("{}", prom);
 }

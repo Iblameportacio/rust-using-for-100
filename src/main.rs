@@ -1,15 +1,15 @@
-//Calcula el promedio de los valores de un vector de f32.
+//Cuenta cuántas veces aparece un número específico en un vector.
 fn main() {
     let v = vec![
-        1.0, 10.3, 2.3, 1.44, 4.1, 2.32, 3.0, 6.7, 5.7, 3.5, 0.2, 5.6, 9.8, 82.79, 19.8, 67.0, 1.2,
-        2.1, 3.4, 6.9,
+        1, 2, 3, 4, 6, 32, 4, 667, 9, 8, 8236, 3132, 5, 451, 654, 613341, 1, 1, 1, 1, 1,
     ];
-    let mut inicio: f32 = 0.0;
-    let total = v.len();
+    let mut contador = 0;
+    let numero = 1;
     for i in v {
         //im not gonna use &v because im not going use the vector again in this problem
-        inicio += i;
+        if numero == i {
+            contador += 1;
+        }
     }
-    let prom = inicio / total as f32;
-    println!("{}", prom);
+    println!("hay {} unos en el vector ", contador);
 }

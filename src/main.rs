@@ -1,9 +1,7 @@
-//Invierte un vector manualmente usando un bucle.
+//Crea un vector que contenga los cuadrados de otro vector.
 fn main() {
-    let v = vec![
-        1, 2, 3, 4, 6, 32, 4, 667, 9, 8, 8236, 3132, 5, 451, 654, 613341, 1, 1, 1, 1, 1,
-    ];
-    let vec_rev_iter: Vec<_> = v.iter().rev().collect();
+    let v = vec![1, 2, 3, 4, 5];
+    let vec_rev_iter: Vec<_> = v.iter().map(|x| x * x).collect();
     for i in vec_rev_iter {
         println!("{}", i);
     }

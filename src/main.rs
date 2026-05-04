@@ -5,11 +5,11 @@ fn main() {
         2.1, 3.4, 6.9,
     ];
     let mut inicio: f32 = 0.0;
-    let mut contador = 0;
+    let total = v.len();
     for i in v {
-        contador += 1;
+        //im not gonna use &v because im not going use the vector again in this problem
         inicio += i;
     }
-    let prom = inicio / contador as f32;
+    let prom = inicio / total as f32;
     println!("{}", prom);
 }

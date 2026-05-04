@@ -1,9 +1,13 @@
-//Crea un vector del 1 al 10 y súmalo.
+//Encuentra el número mayor en un vector de 20 números aleatorios.
 fn main() {
-    let mut inicio = 0;
-    let v = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let v = vec![
+        1, 10, 23, 14, 4, 2, 3, 6, 57, 35, 2, 56, 9, 8279, 98, 670, 12, 21, 34, 69,
+    ];
+    let mut mayor = v[0];
     for i in v {
-        inicio += i;
+        if mayor < i {
+            mayor = i;
+        }
     }
-    println!("la suma total del vector es: {}", inicio);
+    println!("{}", mayor)
 }

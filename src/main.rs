@@ -1,10 +1,13 @@
-//Suma dos vectores elemento por elemento (deben tener el mismo tamaño).
+//Encuentra la posición (índice) de un elemento en un vector.
 fn main() {
     let v = vec![1, 2, 3, 4, 5, 6];
-    let w = vec![2, 3, 4, 5, 6, 7];
-    let mut solucion = Vec::new(); // Creamos el nuevo vector vacío
+    let buscar_este_numero = 6;
     for i in 0..v.len() {
-        solucion.push(v[i] + w[i]);
+        if v[i] == buscar_este_numero {
+            println!(
+                "el numero {} esta en la posicion v[{}]",
+                buscar_este_numero, i
+            )
+        }
     }
-    println!("{:?}", solucion);
 }

@@ -1,3 +1,3 @@
 fn main() {
-    println!("para no perder la racha de commits lmao")
+    println!("estoy haciendo un curso d rust por eso no hay commits")
 }

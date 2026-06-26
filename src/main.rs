@@ -1,12 +1,17 @@
-//Tabla de multiplicar del 1 al 10 con formato alineado (usa {:>3})
-// im back i guess
+//pirámide centrada de asteriscos de n filas
 fn main() {
-    for i in 1..=10 {
-        println!("esta es la tabla del: {}", i);
-        for z in 1..=10 {
-            let solved = z * i;
-            println!("{:>3} * {:>3} = {:>3}", i, z, solved);
-        }
-        println!(""); //print vacío para un salto entre las líneas
+    let filas_totales = 20;
+
+    for i in 1..=filas_totales {
+        // 1. Calculamos cuántos espacios y asteriscos tocan en esta fila
+        let espacios_necesarios = filas_totales - i;
+        let asteriscos_necesarios = (2 * i) - 1;
+
+        // 2. Creamos los hilos de texto repitiendo los caracteres
+        let bloques_espacio = " ".repeat(espacios_necesarios);
+        let bloques_asterisco = "*".repeat(asteriscos_necesarios);
+
+        // 3. Juntamos ambos e imprimimos
+        println!("{}{}", bloques_espacio, bloques_asterisco);
     }
 }

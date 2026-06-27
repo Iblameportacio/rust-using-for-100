@@ -1,23 +1,23 @@
-//Verifica si un número es abundante (suma divisores > n)
-// Para saber si un número es abundante,
-// primero tenemos que entender qué es un divisor propio.
-// Un divisor propio de un número $n$ es cualquier número entero
-// positivo más pequeño que él que lo divide exactamente
-// (es decir, que el residuo de la división sea cero).
-// si sumamos esos numero y el resultado es mayor a n
-// entonces es un número abundante
+//Collatz: cuenta los pasos para llegar a 1 desde n
+// ESTO SI QUE ES EMOCIONANTE, LA CONJETURA DE COLLATZ JAJAJAJJAJAJA
+// La regla dice que si eliges cualquier número entero positivo y
+// sigues un juego de dos reglas simples, tarde o temprano siempre vas a terminar llegando al número 1
+// la ecuación es 3n+1 si el numero es impar lo multiplicas por tres y le sumas uno
+// si es par lo divides por dos y así
 fn main() {
-    let numero = 12; //queremos saber si este número es abundante
-    let mut es_abundante = false;
-
-    let mut suma = 0;
-    for i in 1..numero {
-        if numero % i == 0 {
-            suma += i;
+    let mut numerito: i32 = 43;
+    println!("para que el numero {} sea uno", numerito);
+    let mut pasos = 0;
+    loop {
+        if numerito % 2 == 0 {
+            numerito = numerito / 2;
+        } else {
+            numerito = numerito * 3 + 1;
+        }
+        pasos += 1;
+        if numerito == 1 {
+            break;
         }
     }
-    if suma > numero {
-        es_abundante = true;
-    }
-    println!("el numero {} es abundante? {}", numero, es_abundante)
+    println!("fueron necesarios dar {} pasos", pasos)
 }
